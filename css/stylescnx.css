@@ -7,7 +7,7 @@ body{
 h1{
     display: flex;
      justify-content: center;
-	color: #00861B ;
+	color: #b46c31;
 
 }
 h2{
@@ -41,11 +41,11 @@ input{
 button{
 	border:0; padding: 10px 15px;
 	cursor:pointer; color:white;
-	background-color:#AACE3A;
+	background-color:#ffbb84;
 
 }
   button:focus,button:hover{
-	background-color:   #00861B  ;
+	background-color:   #b46c31  ;
 }
 .submit-form{
 	text-align:right;
