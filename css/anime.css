@@ -174,19 +174,19 @@
 
 .animeux-grid4 {
     background: url(../images/nos_chiens/1.jpeg);
-    grid-column: 1/5;
+    grid-column: 1/3;
     grid-row: 3/4;
 }
 
 .animeux-grid5 {
     background: url(../images/nos_chiens/1.jpeg);
-    grid-column: 1/5;
-    grid-row: 1;
+    grid-column: 3/5;
+    grid-row: 3/5;
 }
 
 .animeux-grid6 {
     background: url(../images/nos_chiens/1.jpeg);
-    grid-column: 1/5;
+    grid-column: 1/3;
     grid-row: 4/5;
 }
 
@@ -226,20 +226,20 @@
 
 .animeux-grid10 {
   background: url(../images/nos_chats/6.jpeg);
-  grid-column: 1;
-  grid-row: 3 / 5;
+  grid-column: 1/3;
+  grid-row: 3 / 4;
 }
 
 .animeux-grid11{
   background: url(../images/nos_chats/6.jpeg);
-  grid-column: 2 / 4;
+  grid-column: 3/ 5;
   grid-row: 3 / 5;
 }
 
 .animeux-grid12 {
   background: url(../images/nos_chats/6.jpeg);
-  grid-column: 4;
-  grid-row: 3 / 5;
+  grid-column: 1/3;
+  grid-row: 4/ 5;
 }
 
 /*-----------------------------------------------------------------------*/
