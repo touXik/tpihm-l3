@@ -99,6 +99,39 @@
     font-weight: 30px;
 }
 
+.delivery-link {
+  line-height: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  width: 70px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.scroll-text {
+  color: white;
+  position: relative;
+  transition: transform 0.4s;
+}
+
+.scroll-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+}
+
+.scroll-text:hover {
+  transform: translateY(-100%);
+}
+
+.scroll-icon {
+  font-size: 25px;
+  color: white;
+}
+
+
 /*---------------------------------------------------------------------------------------------------*/
 
 
