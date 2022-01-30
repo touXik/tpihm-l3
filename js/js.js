@@ -19,6 +19,4 @@ const burgerContainer = document.querySelector('.burger-container');
             burgerContainer.classList.toggle('active');
             navLinks.classList.toggle('active');
         })
-
-
       
