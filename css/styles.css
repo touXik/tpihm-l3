@@ -98,15 +98,22 @@
     font-family: "Abril Fatface", cursive;
     font-weight: 30px;
 }
+.texte{
+  width: 50%;
+  color: white;
+  font-size: 50px;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 30px;
+}
 
 .delivery-link {
-  line-height: 20px;
+  line-height: 25px;
   text-decoration: none;
   display: flex;
   align-items: center;
   position: absolute;
   bottom: 30px;
-  width: 70px;
+  width: 100px;
   justify-content: space-between;
   overflow: hidden;
 }
@@ -114,6 +121,7 @@
   color: white;
   position: relative;
   transition: transform 0.4s;
+  font-weight: bold;
 }
 
 .scroll-text::before {
@@ -127,7 +135,7 @@
 }
 
 .scroll-icon {
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 }
 
