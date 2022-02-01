@@ -141,7 +141,98 @@
 
 
 /*---------------------------------------------------------------------------------------------------*/
+.animeux-contener{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.animeux-contener h1 {
+  position: relative;
+ 
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  font-weight: 100;
+  margin-bottom: 2%;
+  margin-left: 3%;
 
+}
+
+.animeux-contener h1::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 7px;
+  background: #b46c31;
+  bottom: 0;
+  box-shadow: 0 2px 2px #0000001F;
+}
+
+
+.cards {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+
+ 
+}
+
+@media(max-width: 900px){
+  .cards {
+    grid-template-columns: repeat(2, 1fr); 
+    width: 95%;
+  }
+}
+
+
+
+.card {
+  position: relative;
+  padding-bottom: 150%;
+ 
+
+}
+
+.card-background {
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform-origin: center;
+  transition: .2s;
+}
+
+.card:hover .card-background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.cards:hover > .card:not(:hover) .card-background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+.card-content {
+  padding: 24px;
+  position: absolute;
+  font-family: "Abril Fatface", cursive;
+}
+
+.card-content p {
+  color: rgba(255, 255, 255, .6);
+  font-size: .9rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card-content h3 {
+  color: rgba(255, 255, 255, .9);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+}
 
 
 
