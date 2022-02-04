@@ -233,10 +233,34 @@
   font-size: 1.9rem;
   text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
 }
+    /* -------------------------------------------------------------------------------------------- */
+   .a-propos{
+          width: 95%;
+          margin: 2% 2% 2% 2%;
+          border-top: solid #b46c31;
+          border-width: 1px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+        }
+        .apropos-texte{
+           margin: 2% 0% 2% 0%;
+        } 
+         .a-propos h1 {
+       font-family: "Abril Fatface", cursive;
+      text-align:center;
+         font-weight: bold;
+        font-size: 2.2em;
+      }
+       .a-propos p {
+      font-family: "Abril Fatface", cursive;
+      text-align:center;
+      font-size: 2em;
+     }   
 
-
-
- /*----------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------*/
 .footer {
     min-height: 100px;
     display: flex;
@@ -348,7 +372,8 @@
     }
 
 
-}
+}   
+
 /*--------------------------------------------------------------------------------------*/
 @media (max-width: 550px) {
 
@@ -552,4 +577,14 @@ form .pied-formulaire button:hover {
   form .corps-formulaire .droite {
     margin-left: 0px;
   }
-}
+}       
+      
+     
+     
+        
+    
+    
+
+      
+
+

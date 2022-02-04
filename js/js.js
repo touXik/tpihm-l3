@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     var typed = new Typed(".texte", {
-        strings: ["adopte-le", "aime-le"," et protège-le "],
+        strings: ["adopte-le .", "aime-le ."," et protège-le ."],
         typeSpeed: 80,
         backSpeed: 60,
         loop: true
