@@ -375,7 +375,7 @@
 }   
 
 /*--------------------------------------------------------------------------------------*/
-@media (max-width: 550px) {
+@media (max-width: 650px) {
 
     .logo {
         width: 100px;
@@ -393,8 +393,12 @@
     }
 
     .big-title {
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 35px;
+        line-height: 30px;
+    }
+    .texte{
+      font-size: 35px;
+    
     }
 
     .nav-links a {
