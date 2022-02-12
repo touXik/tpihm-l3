@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="../css/stylescnx.css">
 
-<?php session_start(); ?>
+<?php session_start(); 
+
+?>
 
 <?php
 
@@ -32,24 +34,8 @@ if (isset($_POST['submit'])){
         if($result == true)
         {
             if(password_verify($password, $result['password'])){
-
-                echo " <h1 >NATURE EMOI VOUS S'OUHAITE LA BIENVENU </h1> <br> <h3> information de votre compte </h3>";
-
-        ?>
- 
-                       <p>VOTRE NOM : <?= $_SESSION['lastname']; ?> </p>
-                       <p>VOTRE PRENOM : <?= $_SESSION['firstname']; ?> </p>
-                       <p>VOTRE EMAIL : <?= $_SESSION['email']; ?> </p>
-                       <p>DATE DE CREATION : <?= $_SESSION['date']; ?> </p>
-                       
-   <?php
-                $_SESSION['lastname']= $result['lastname'];
-
-                $_SESSION['firstname']= $result['firstname'];
-                $_SESSION['email']= $result['email'];
-                $_SESSION['date']= $result['date'];
-      
-      echo " <h3>Merci !</h3> ";
+                $_SESSION['email']= $email;
+             header('Location:../index.php');
 
       ?>
 <a href="../html/login.html">Deconexion</a>

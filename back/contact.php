@@ -1,27 +1,38 @@
-
-<link rel="stylesheet" type="text/css" href="../css/stylescnx.css">
-<?php 
-
+<?php
 if(isset($_POST['submit']))
 {
-	if(isset($_POST['Nom']) and isset($_POST['email']) and isset($_POST['num']) and isset($_POST['message']))
-{
-   if(!empty($_POST['Nom']) and !empty($_POST['email']) and !empty($_POST['num'])  and !empty($_POST['message']))
-   {
-   	$Nom=htmlspecialchars($_POST['Nom']);
-   	$email=htmlspecialchars($_POST['email']);
-   	$num=htmlspecialchars($_POST['num']);
-   	$message=htmlspecialchars($_POST['message']);
+	if(!empty($_POST['Nom']) AND !empty($_POST['email']) AND !empty($_POST['message']))
+	{
+		$header="MIME-Version: 1.0\r\n";
+		$header.='From:"SWEET-TAILS"<email-expediteur@example.org>'."\n";
+		$header.='Content-Type:text/html; charset="uft-8"'."\n";
+		$header.='Content-Transfer-Encoding: 8bit';
 
-   	echo "<h1> Contact </h1> <h2> <b>Mr(Mme): $Nom </b> </h2> <h3> Votre message est bien reçu <h3> <p> Message :  < $message ><br> on vous contactera le plus vite possible pare votre adresse : <<b>$email<b> > . ou pare votre numéro de télèphone : <b>$num <b> </p> <h1> Merci !</h1> ";
-           
-           ?>
+		$message='
+		<html>
+			<body>
+			   
+				<div align="center"> 
+				 <img src="../images/sweet-tails" alt="sweet-tails" width="70%">
+				 <br/>
+				<u>Nom de l\'expéditeur :</u>'.$_POST['Nom'].'<br />
+					<u>Mail de l\'expéditeur :</u>'.$_POST['email'].'<br />
+					<u>Nume de l\'expéditeur :</u>'.$_POST['num'].'<br />
+					<br />
+					'.nl2br($_POST['message']).'
+				</div>
+			</body>
+		</html>
+		';
 
-        <a href="../index.php"><h1>Retourne<h1></a>
-        <?php
-
-
-       } 
+		mail("tailssweet85@gmail.com", "CONTACT -SITE-SWEET_TAILS", $message, $header);        
+		echo "Votre message a bien été envoyé !";
+		
+	}
+	else
+	{
+		echo "Tous les champs doivent être complétés !";
 	}
 }
 ?>
+

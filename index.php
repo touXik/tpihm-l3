@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  if(! $_SESSION['email'] ) {
+      header('Location:html/login.html');
+  }
+  
+ 
+
+ 
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +32,7 @@
             <img src="images/sweet-tails.jpg" alt="sweet-tails" class="logo" >
             <ul class="nav-links">
                 <li>
-                    <a href="html/login.html" data-text="Accueil">Accueil</a>
+                    <a href="#" data-text="Accueil">Accueil</a>
                 </li>
                 <li>
                     <a href="#apropos" data-text="A-propos">A-propos</a>
@@ -29,11 +42,9 @@
                     <a href="#contact" data-text="Contact">Contact</a>
                 </li>
                  <li>
-                    <a href="html/login.html" data-text="Se connecter">Se connecter</a>
+                    <a href="back/logout.php" data-text="Se déconecter">Se déconecter</a>
                 </li>
-                 <li>
-                    <a href="html/register.html" data-text="S'inscrire">S'inscrire</a>
-                </li>
+                
             </ul>
             <div class="burger-container">
                 <div class="burger"></div>
@@ -54,12 +65,12 @@
 <!------------------------------------------------------------------------------------------------------>
 
  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
-<!-- <section id="animeux" class="animeux-contener">
+<section id="animeux" class="animeux-contener">
   
    <h1>Animeux</h1>
 <div class="cards">
      
-    <a href="html/chiens.html" class="card">
+    <a href="back/affiche_categorie/chiens.php" class="card">
       <div class="card-background" style="background-image: url(images/categorie/chiens.jpg)"></div>
       <div class="card-content">
         <p>Catégorie</p>
@@ -67,7 +78,7 @@
       </div>
     </a>
   
-    <a href="html/chats.html" class="card">
+    <a href="back/affiche_categorie/chats.php" class="card">
       <div class="card-background" style="background-image: url(images/categorie/chats.jpg)"></div>
       <div class="card-content">
         <p>Catégorie</p>
@@ -75,7 +86,7 @@
       </div>
     </a>
   
-    <a href="html/équidès.html" class="card">
+    <a href="back/affiche_categorie/equide.php" class="card">
       <div class="card-background" style="background-image: url(images/categorie/équidés.jpeg)"></div>
       <div class="card-content">
         <p>Catégories</p>
@@ -83,7 +94,7 @@
       </div>
     </a>
   
-    <a href="html/rongeur.html" class="card">
+    <a href="back/affiche_categorie/rogneur.php" class="card">
       <div class="card-background" style="background-image: url(images/categorie/rongeur.jpg)"></div>
       <div class="card-content">
         <p>Catégories</p>
@@ -91,7 +102,7 @@
       </div>
     </a>
   </div>
-</section> -->
+</section>
 <!------------------------------------------------------------------------------------------------------>
 <section id="apropos" class="a-propos">
   <div class="apropos-texte">
