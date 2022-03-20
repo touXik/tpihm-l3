@@ -28,6 +28,8 @@
             <button><a href="ajoutchiens.php"> ajouter chiens</a></button>
                 <h1>chiens ajouter </h1>
            <ul>
+        
+
                 <?php while($c=$chiens->fetch()){ ?>
                   <a href="affichiens.php?id=<?=$c['id']?>"> <img src="img/<?=$c['id']?>.jpg" > </a>
                 <li><a href="affichiens.php?id=<?=$c['id']?>"> <?= $c['nom']?></a></li>
@@ -35,6 +37,7 @@
                 <li><?= $c['info']?></li>
                 <button><a href="supp.php?id=<?=$c['id']?>">suprimer</a> </button>
                 <button><a href="modifier.php?edit=<?=$c['id']?>"> modifier</a></button>
+              
                   <?php } ?>
          
             </ul> 

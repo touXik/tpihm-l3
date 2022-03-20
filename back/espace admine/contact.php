@@ -24,7 +24,7 @@ $contact=$db -> query('SELECT * FROM contact ORDER BY date_pub DESC');
       
         
 
-        header('Location:../../index.html#contact');
+    //  header('Location:../../index.html');
         echo' <h1>message envoiyer</h1>';
      
 
@@ -38,4 +38,3 @@ $contact=$db -> query('SELECT * FROM contact ORDER BY date_pub DESC');
 
 
 ?>
-

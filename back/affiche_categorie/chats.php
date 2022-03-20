@@ -33,7 +33,7 @@
                 <li><a href="../espace admine/ajout_chats/affichats.php?id=<?=$c['id']?>"> <?= $c['nom']?></a></li>
                 <li><?= $c['categorie']?></li>
                 <li><?= $c['info']?></li>
-            
+                <button name="adopte" ><a href="../adopte/adopte_h.php?id=<?=$c['id']?>">adopte</a> </button> 
                   <?php } ?>
                   
          

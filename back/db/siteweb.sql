@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 12 fév. 2022 à 21:13
+-- Généré le :  Dim 20 mars 2022 à 11:09
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -25,6 +25,88 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `adopte`
+--
+
+DROP TABLE IF EXISTS `adopte`;
+CREATE TABLE IF NOT EXISTS `adopte` (
+  `noma` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `adress` text NOT NULL,
+  `demande` text NOT NULL,
+  `date_env` timestamp NOT NULL DEFAULT current_timestamp(),
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_c` int(11) NOT NULL,
+  `nom_c` varchar(255) NOT NULL,
+  `categorie_c` varchar(255) NOT NULL,
+  `info_c` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `adopte_e`
+--
+
+DROP TABLE IF EXISTS `adopte_e`;
+CREATE TABLE IF NOT EXISTS `adopte_e` (
+  `noma` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `adress` varchar(255) NOT NULL,
+  `demande` text NOT NULL,
+  `date_env` timestamp NOT NULL DEFAULT current_timestamp(),
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_c` int(11) NOT NULL,
+  `nom_c` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `adopte_h`
+--
+
+DROP TABLE IF EXISTS `adopte_h`;
+CREATE TABLE IF NOT EXISTS `adopte_h` (
+  `noma` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `adress` text NOT NULL,
+  `demande` text NOT NULL,
+  `date_env` timestamp NOT NULL DEFAULT current_timestamp(),
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_c` int(11) NOT NULL,
+  `nom_c` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `adopte_r`
+--
+
+DROP TABLE IF EXISTS `adopte_r`;
+CREATE TABLE IF NOT EXISTS `adopte_r` (
+  `noma` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `adress` varchar(255) NOT NULL,
+  `demande` text NOT NULL,
+  `date_env` timestamp NOT NULL DEFAULT current_timestamp(),
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_c` int(11) NOT NULL,
+  `nom_c` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `chats`
 --
 
@@ -37,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `chats` (
   `datepub` timestamp NOT NULL DEFAULT current_timestamp(),
   `date_edit` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -54,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `chiens` (
   `datepub` timestamp NOT NULL DEFAULT current_timestamp(),
   `date_edit` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -69,9 +151,9 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `email` varchar(255) NOT NULL,
   `num` int(11) NOT NULL,
   `message_pub` text NOT NULL,
-  `date_pub` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `date_pub` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -88,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `equide` (
   `datepub` timestamp NOT NULL DEFAULT current_timestamp(),
   `date_edit` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -105,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `rogneur` (
   `datepub` timestamp NOT NULL DEFAULT current_timestamp(),
   `date_edit` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -123,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `date` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

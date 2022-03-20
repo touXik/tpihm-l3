@@ -33,12 +33,16 @@
                 <li><a href="../espace admine/ajout_animaux/affichiens.php?id=<?=$c['id']?>"> <?= $c['nom']?></a></li>
                 <li><?= $c['categorie']?></li>
                 <li><?= $c['info']?></li>
-        
-                  <?php } ?>
+                <button name="adopte" ><a href="../adopte/adopte.php?id=<?=$c['id']?>">adopte</a> </button>
+                         
+
+                  <?php   } ?>
            
-         
+                 
             </ul> 
          </dive> 
-        
+         <!-- <input type="submit" name="adopte" placeholder="adopte"  > -->
+       
 </body>
 </html>
+       

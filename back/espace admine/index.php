@@ -32,6 +32,7 @@
      </div>
     
          <button><a href="affichmss.php">boit reception</a></button>
+         <button><a href="demande/affich-dem.php">demande d'adoption</a></button>
 </body>
 </html>
 

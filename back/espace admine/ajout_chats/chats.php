@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(!$_SESSION['psuedo']) {
+  if(!$_SESSION['pseudo']) {
       header('Location: conexion.html');
   }
   
