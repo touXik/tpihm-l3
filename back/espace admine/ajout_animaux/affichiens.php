@@ -33,28 +33,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../../CSS/admin/affich.css">
  
 
-  <title>Document</title>
+  <title>animal</title>
 </head>
 <body>
-       <button ><a href="../logout.php"> DECONEXION</a></button><br>
-       <button ><a href="chiens.php"> chiens</a></button><br>
-       
-       <form action="" methode="POST">  
-         <img src="img/<?=$id?>.jpg" alt="<?=$nom?>">  
-       <h1> <?=$nom ?></h1> <br>
-            <h2> <?= $categorie ?> </h2><br>
-            <p> <?= $info ?> </p>
-</form>
-
-              
-                 
-                <button><a href="supp.php?id=<?= $get_id?>">suprimer</a> </button>
-                <button><a href="modifier.php?edit=<?= $get_id?>"> modifier</a></button>
+           <div class="menu">
+                     <button ><a href="../logout.php"> DECONEXION</a></button><br>
+                     <button ><a href="chiens.php"> chiens</a></button><br>
+           </div>
+        <div class="el">
             
+                     <!-- <form action="" methode="POST">   -->
+                <div class="img">
+                       <img src="img/<?=$id?>.jpg" alt="<?=$nom?>">  
+                </div>
+           <div class="txt">
+                          <h1><span> Nom : </span> <?=$nom ?></h1> <br>
+                          <h2><span> Categorie : </span><?= $categorie ?> </h2><br>
+                          <p><span> Information : </span><br><?= $info ?> </p>
+                      <!-- </form> -->
+             </div> 
+
+            <div class="bt1">                 
+                     <button class="s"><a href="supp.php?id=<?= $get_id?>">suprimer</a> </button>
+                     <button><a href="modifier.php?edit=<?= $get_id?>"> modifier</a></button>
+            </div> 
          
-           
+        </div>
 </body>
 </html>
 

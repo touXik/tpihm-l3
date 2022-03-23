@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+}
+
+.menu {
+  
+    margin-top: 3px;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.title{
+    border-style: solid;
+    border-color: black;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px; 
+    margin-top: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.cat{
+   
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+ flex-wrap: wrap;
+   
+   
+
+}
+
+.c1{
+  
+  border-style:solid ;
+  border-radius: 10px;
+    border-width: 4px;
+    
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch ;
+    align-items: center;
+   
+   
+    
+    
+ 
+    
+}
+.images{
+   
+    height: 80%;
+}
+.txt{
+    
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 50px;
+   
+}
+img {
+    /* filter:  grayscale(100%); */
+     width:200px;
+    height: 100%;
+
+}
+.bt{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+     font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+     font-weight: bold;
+}
+ button{
+     border-radius:15px;
+	border:0; padding: 10px 15px;
+	cursor:pointer; color:white;
+	background-color:#0000005b;
+
+}
+   button:focus,button:hover{
+	background-color:   #000000   ;
+}

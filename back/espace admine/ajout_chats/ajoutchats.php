@@ -51,21 +51,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="../../../CSS/stylescnx.css">
     <title>Document</title>
 </head>
 <body>
-<div>
-       <button><a href="../index.php">acuilleeee</a></button>
-       <button><a href="chats.php">chats</a></button>
-    <form action="" method="POST" enctype="multipart/form-data">
-     <h1>ajouter chats </h1>
-     <input type="text" name="nom" placeholder="son nom " ><br>
-     <input type="text" name="categorie"placeholder=" sa categorie " ><br>
-     <textarea name="info" placeholder="ses information"></textarea> <br>
-     <input type="file" name="img"><br>
-     <input type="submit" name="submit">
+
+    
+     
+            <button><a href="../index.php">acuilleeee</a></button>
+            <button><a href="chats.php">chats</a></button>
+          
+ <form action="" method="POST" enctype="multipart/form-data">
+                          <h1>ajouter chats </h1>
+
+              <div class="input-form">
+                       <input type="text" name="nom"  id="password" placeholder=" " required><br>
+                       <label for="nom">Nom</label>
+             </div>
+
+
+               <div class="input-form">
+                          <input type="text" name="categorie" id="password" placeholder=" " required><br>
+                          <label for="categorie">categorie</label>
+              </div>
+
+
+                   <div class="submit-form">
+                       <input type="file" name="img">importer image </input> <br>
+                   </div>
+                  <h4>information</h4>
+
+                <div class="input-form">
+                           
+                         <textarea name="info" placeholder="information " required  ></textarea> <br>
+                         
+                 </div>
+
+
+                        <div class="submit-form">
+                            <button type="submit" name="submit">AJOUTER</button>
+                         </div>
+
     </form>
 
- </div>
+
+
 </body>
 </html>

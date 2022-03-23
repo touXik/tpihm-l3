@@ -17,31 +17,68 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="../../../CSS/admin/anime.css">
+  <title>chiens-admin</title>
 </head>
 <body>
-       <button ><a href="../logout.php"> DECONEXION</a></button>
-       <button><a href="../index.php"> acuille</a></button>
-  <div>
-  
-     <div class="chien">
-            <button><a href="ajoutchiens.php"> ajouter chiens</a></button>
-                <h1>chiens ajouter </h1>
-           <ul>
-        
-
-                <?php while($c=$chiens->fetch()){ ?>
-                  <a href="affichiens.php?id=<?=$c['id']?>"> <img src="img/<?=$c['id']?>.jpg" > </a>
-                <li><a href="affichiens.php?id=<?=$c['id']?>"> <?= $c['nom']?></a></li>
-                <li><?= $c['categorie']?></li>
-                <li><?= $c['info']?></li>
-                <button><a href="supp.php?id=<?=$c['id']?>">suprimer</a> </button>
-                <button><a href="modifier.php?edit=<?=$c['id']?>"> modifier</a></button>
               
+
+          <div class="menu">         
+     
+           <button><a href="../index.php"> acuille</a></button>
+         <button><a href="ajoutchiens.php"> ajouter chiens</a></button> 
+         <button ><a href="../logout.php"> DECONEXION</a></button>
+        </div>
+
+
+                    
+
+
+
+                          
+                           <h1>chiens ajouter </h1>
+                        
+
+          
+         <div class="banime">
+
+
+                
+                <?php while($c=$chiens->fetch()){ ?>
+            <dive class="anime">
+                       <div class="img">
+                  <a href="affichiens.php?id=<?=$c['id']?>"> <img src="img/<?=$c['id']?>.jpg" > </a>
+                        </div>
+                        <div class="c">
+                    <div class="txt">
+                         <div class="nomc">
+                <p><span> Nom:</span> <a href="affichiens.php?id=<?=$c['id']?>">  <?= $c['nom']?></a></p>
+                <p> <span> Categorie : </span><?= $c['categorie']?></p>
+                              </div>
+                        <div class="info">
+                             <div class="dvi">
+                        <h4>information :</h4>  
+                             </div>
+                             <div class="dvp">
+                 <p ><?= $c['info']?></p>
+                                </div>
+                         </div>
+                     </div>
+                     <div class="button">
+                           <!-- <div class="s"> -->
+                <button class="s"><a href="supp.php?id=<?=$c['id']?>">suprimer</a> </button>
+                                <!-- </div> -->
+                         <!-- <div class="m"> -->
+                <button class="m"><a href="modifier.php?edit=<?=$c['id']?>"> modifier</a></button>
+                             <!-- </div> -->
+                </div>
+                        </div>
+                </dive>
                   <?php } ?>
+               
+         </dive>
+            
          
-            </ul> 
-         </dive> 
         
 </body>
 </html>

@@ -63,16 +63,48 @@ if(isset($_POST['nom'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../CSS/stylescnx.css">
+    <title>admin-modifier</title>
 </head>
 <body>
 
-    <form  method="POST">
-         
-     <input type="text" name="nom" placeholder="son nom"  value=" <?=$edit_chiens['nom'] ?>" ><br>
-     <input type="text" name="categorie" placeholder=" sa categorie " value="<?= $edit_chiens['categorie']?>"><br>
-     <textarea name="info" placeholder="ses information"  > <?=$edit_chiens['info']?> </textarea> <br>
-     <input type="submit" name="submit">
+    
+
+    <button><a href="../index.php">acuilleeee</a></button>
+            <button><a href="chiens.php">chiens</a></button>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+     <h1>modifier chiens </h1>
+     
+
+          
+
+
+              <div class="input-form">
+                       <input type="text" name="nom"   placeholder=" " required value=" <?=$edit_chiens['nom'] ?>"  ><br>
+                       <label for="nom">Nom</label>
+             </div>
+
+
+               <div class="input-form">
+                          <input type="text" name="categorie"  placeholder=" " required value="<?= $edit_chiens['categorie']?>"><br>
+                          <label for="categorie">categorie</label>
+              </div>
+
+
+                  <h4>information</h4>
+
+                <div class="input-form">
+                           
+                         <textarea name="info" placeholder="information " required  ><?=$edit_chiens['info']?></textarea> <br>
+                         
+                 </div>
+
+
+                        <div class="submit-form">
+                            <button type="submit" name="submit">MODIFIER</button>
+                         </div>
+
     </form>
 
  
