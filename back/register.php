@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="../css/stylescnx.css">
-
+<link rel="stylesheet" href="../CSS/mssalrt.css">
 <?php
 
 
@@ -36,14 +36,14 @@ if (isset($_POST['submit'])){
             'email'=>$email,
             'password'=>$hashpass
         ]);
-           echo "<h3> Votre compte a été créé avec succès ! </h3> Vous pouvez <b> Vous Connecter Maintenant !</b>  ";
+           
            include '../html/minilogin.html';
 
         } else{
-             echo " <h2> ERREUR ! </h2> <h3> cette émail < <b> $email </b> >  éxiste dejja </h3> <br> <h4> Veuillez bien vérefier Votre <b> email! </b> <b>Merci<b> </h4> <br>";
-              ?>
-        <a href="../html/register.html">Retourne</a>
-        <?php
+            
+             include '../html/register.html';
+             include '../html/alrt.html';
+        
         }
 
 
@@ -52,10 +52,10 @@ if (isset($_POST['submit'])){
        
 
     } else {
-        echo " <h2> ERREUR ! </h2> <h3> Mots de passe <b> Non identique </b> </h3><br> <h4>Veuillez bien vérefier Votre <b>mots de passe ! </b><b>Merci<b> </h4>";
-        ?>
-        <a href="../html/register.html">Retourne</a>
-        <?php
+      
+            include '../html/register.html'; 
+            include '../html/alrt1.html';
+       
     }
       
 

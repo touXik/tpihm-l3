@@ -41,7 +41,7 @@
                                             <div class="info">
                                                    <p><span> NOM : </span><?= $m['Nom']?></a></p>
                                                    <p><span>  Email : </span><?= $m['email']?></p>
-                                                   <p><span> Numéro : </span><?= $m['num']?></p>
+                                                   <p><span> Numéro : </span><?= $m['sujet']?></p>
                                                    <p><span> Message : </span><?= $m['message_pub']?></p>
                                              </div>
 

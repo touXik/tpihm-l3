@@ -51,20 +51,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../CSS/stylescnx.css">
+    <link rel="stylesheet" href="../../../CSS/admin/stylescnx.css">
     <title>Document</title>
 </head>
 <body>
 <div>
-      <!-- <button><a href="rogneur.php">rogneur</a></button>
-    <form action="" method="POST" enctype="multipart/form-data">
-     <h1>ajouter rogneur </h1>
-     <input type="text" name="nom" placeholder="son nom " ><br>
-     <input type="text" name="categorie"placeholder=" sa categorie " ><br>
-     <textarea name="info" placeholder="ses information"></textarea> <br>
-     <input type="file" name="img"><br>
-     <input type="submit" name="submit">
-    </form> -->
+  
 
     <button><a href="../index.php">acuilleeee</a></button>
             <button><a href="rogneur.php">rongeur</a></button>

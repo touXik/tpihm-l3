@@ -11,7 +11,9 @@ if(isset($_SESSION['lastname']) && isset($_SESSION['firstname']) && isset($_SESS
      
 
 }else{
-    echo"veuiller voous connecter a votre compts";
+   
+    include '../html/login.html'; 
+    include '../html/alrt1.html';
 }
 
 
@@ -45,20 +47,17 @@ if (isset($_POST['submit'])){
                 
 
             }else {
-                echo " <h2> ERREUR ! </h2> <br> Votre <b> mot de passe </b> est <b> incorrecte </b>";
-                ?>
-
-<a href="../html/login.html">Retourne</a>
-<?php
+             
+                include '../html/login.html'; 
+                include '../html/alrt1.html';
 
             }
 
         }else {
-            echo " <h2> le compte portant  lemail : < " .$email . "   > n'existe pas </h2> <br> ";
-            ?>
+           
+            include '../html/login.html'; 
+            include '../html/alrt3.html';
 
-<a href="../html/login.html"> <h1>Retourne</h1></a>
-<?php
 
         }
       

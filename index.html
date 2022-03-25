@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,182 +8,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="icon" type="images/png" href="images/log2.jpeg"> 
+    <link rel="icon" type="images/png" href="images/log2.jpeg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <title>Sweet-tails</title>
 
 
 </head>
 
 <body>
+<!--- header  --->
+<header class="header">
 
-<!------------------------------------------------------------------------------------------------------>
-    <section id="home" class="home-container">
-        <header id="header" class="header">
-            <img src="images/sweet-tails.jpg" alt="sweet-tails" class="logo" >
-            <ul class="nav-links">
-                <li>
-                    <a href="html/login.html" data-text="Accueil">Accueil</a>
-                </li>
-                <li>
-                    <a href="#apropos" data-text="A-propos">A-propos</a>
-                </li>
-             
-                 <li>
-                    <a href="#contact" data-text="Contact">Contact</a>
-                </li>
-                 <li>
-                    <a href="html/login.html" data-text="Se connecter">Se connecter</a>
-                </li>
-                 <li>
-                    <a href="html/register.html" data-text="S'inscrire">S'inscrire</a>
-                </li>
-            </ul>
-            <div class="burger-container">
-                <div class="burger"></div>
-            </div>
-        </header>
-        <div class="landing">
-            <h1 class="big-title">N'achetez pas votre <br> animal de compagnie,<br> <span class="texte"></span> </h1>
-          
-            <a href="#animeux" class="delivery-link">
-            <span class="scroll-text" data-text="Animeux">Animeux</span>
-            <i class="scroll-icon fas fa-angle-down"></i>
-            </a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> <span>sweet</span>Tails </a>
+
+        <nav class="navbar">
+            <a href="#">accueil</a>
+            <a href="#a-propos">à propos</a>
+            <a href="#services">services</a>
+            <a href="html/contact.html">contact</a>
+            <a href="html/login.html">connexion</a>
+            <a href="html/register.html">inscription</a>
+        </nav>
+
+    <div id="login-btn">
            
-            
+    </div>
+
+</header> 
+
+<!--- bg du site --->
+<div class="home" id="home">
+    <img data-speed="5" class="home-parallax" src="images/babash.jpg" alt="background du site">
+</div>
+
+<!--- slider vers le bas --->
+<div class="landing" align="center">
+    <a href="#categories" class="delivery-link">
+       
+        <i class="scroll-icon fas fa-angle-down"></i> <br>
+        <span class="scroll-text" data-text="Catégories"></span>
+    </a>
+</div>
+
+<!--- categories --->
+<section class="categories" id="categories">
+
+   <!--  <h1 class="heading">nos <span>categories</span> </h1> -->
+
+    <div class="swiper vehicles-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <a href="back/affiche_categorie/chats.php"><img src="images/amcic.PNG" alt=""></a>
+                <div class="content">
+                    <h3>chats</h3>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <a href="back/affiche_categorie/chiens.php"><img src="images/aqjun.PNG" alt=""></a>
+                <div class="content">
+                    <h3>chiens</h3>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <a href="back/affiche_categorie/equide.php"><img src="images/awtul.jpg" alt=""></a>
+                <div class="content">
+                    <h3>équidés</h3>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <a href="back/affiche_categorie/rogneur.php"><img src="images/awtul.jpg" alt=""></a>
+                <div class="content">
+                    <h3>rongeurs</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!--- sevices  --->
+
+<section class="services" id="services">
+
+    <h1 class="heading">nos <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-bone"></i>
+            <h3>fournitures animaux</h3>
+            <p>tous types de nourriture pour les animaux du refuge.</p>
           
         </div>
-    </section>
-<!------------------------------------------------------------------------------------------------------>
 
- <!-- ----------------------------------------------------------------------------------------------------------------------- -->
-<!-- <section id="animeux" class="animeux-contener">
-  
-   <h1>Animeux</h1>
-<div class="cards">
-     
-    <a href="html/chiens.html" class="card">
-      <div class="card-background" style="background-image: url(images/categorie/chiens.jpg)"></div>
-      <div class="card-content">
-        <p>Catégorie</p>
-        <h3>Chiens</h3>
-      </div>
-    </a>
-  
-    <a href="html/chats.html" class="card">
-      <div class="card-background" style="background-image: url(images/categorie/chats.jpg)"></div>
-      <div class="card-content">
-        <p>Catégorie</p>
-        <h3>Chats</h3>
-      </div>
-    </a>
-  
-    <a href="html/équidès.html" class="card">
-      <div class="card-background" style="background-image: url(images/categorie/équidés.jpeg)"></div>
-      <div class="card-content">
-        <p>Catégories</p>
-        <h3>Equidès</h3>
-      </div>
-    </a>
-  
-    <a href="html/rongeur.html" class="card">
-      <div class="card-background" style="background-image: url(images/categorie/rongeur.jpg)"></div>
-      <div class="card-content">
-        <p>Catégories</p>
-        <h3>Rongeur</h3>
-      </div>
-    </a>
-  </div>
-</section> -->
-<!------------------------------------------------------------------------------------------------------>
-<section id="apropos" class="a-propos">
-  <div class="apropos-texte">
-  <h1>À propos de nous</h1>
-<p >
-    Bonjour, nous espérons que ce message vous trouvera en bonne santé.<br>
-    Nous sommes une association qui tend à venir en aide aux animaux sans abri,<br> 
-    Nous les récupérons et prenons soin d'eux (voir nos services)<br> 
-    jusqu'à ce que nous leur trouvions une bonne famille qui les adopte.<br> 
-    S'il vous plait
-    n'hésitez pas à nous contacter ou à faire un don si possible,<br> 
-    nous vous en serons très reconnaissants. Merci à bientôt!!
-</p>
+
+        <div class="box">
+            <i class="fas fa-home"></i>
+            <h3>refuges gratuits</h3>
+            <p>refuges gratuits rien que pour les animaux rescués.</p>
+           
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-nurse"></i>
+            <h3>gardes animaux</h3>
+            <p>disponibilités des volontaires gardes animaux spécialites.</p>
+            
+        </div>
+    </div>
+
+</section>
+<section>
+    <!--- a propos --->
+    <section class="a-propos" id="a-propos">
+      <h1 class="heading">à <span>propos</span></h1>
+
+      <h1 align="center" class="h1">
+        Bonjour, nous espérons que ce message vous trouve en bonne santé.<br><br>
+        Nous sommes une organisation qui tend à aider les animaux de compagnie sans abri,<br> Nous les récupérons et prenons soin d'eux <a href="#services">(voir nos services)</a> <br> jusqu'à ce que nous leur trouvions une bonne famille qui les adoptent.<br><br> S'il vous plait
+        n'hésitez pas à <a href="html/contact.html">nous contacter</a> ou faire un <a href="#">don</a> si possible,<br> nous vous en serons très reconnaissants. merci,<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; à bientôt!!
+           
+      </h1>   
+    </section>
+
+
+
+    <!--- footer --->
+    <footer id="footer" class="footer"> 
+      <span class="copyrights">&copy; 2022 - Sweet tails</span>
+      <a href="#" class="conditions">Conditions générales d'adoption</a>
+    </footer>
+
+</section>
+<!--- boutons partages  --->
+<section  id="bouton_partage">
+  <div class="share">
+    <ol>
+      <li><a target="-_blank" href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a></li> 
+      <li><a target="_blank" href="https://facebook.com"><i class="fab fa-facebook fa-2x"></i></a></li>
+      <li><a target="_blank" href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a></li>
+    </ol>
+    <div class="toggle"></div>
   </div>
 </section>
 
 
-<!------------------------------------------------------------------------------------------------------>
-  
-<!------------------------------------------------------------------------------------------------------>
-    <section  id="bouton_partage">
-        <div class="share">
-        <ol>
-            <li><a target="-_blank" href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a></li> 
-            <li><a target="_blank" href="https://facebook.com"><i class="fab fa-facebook fa-2x"></i></a></li>
-            <li><a target="_blank" href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a></li>
-        </ol>
-        <div class="toggle"></div>
-    </div>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<!--- js --->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-    </section>
-<!------------------------------------------------------------------------------------------------------>
-     <form id="contact" method="post"  action="back/espace admine/contact.php" > 
-      <h1>Contactez-nous</h1>
-      <div class="separation"></div>
-      <div class="corps-formulaire">
-        <div class="gauche">
-          <div class="groupe">
-            <label>Votre Nom et Prénom</label>
-            <input type="text" name="Nom" autocomplete="off" required />
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="groupe">
-            <label>Votre adresse e-mail</label>
-            <input type="email" name="email" autocomplete="off" required />
-            <i class="fas fa-envelope"></i>
-          </div>
-         <div class="groupe">
-            <label>Votre téléphone</label>
-            <input type="text" name="num" autocomplete="off" required />
-            <i class="fas fa-mobile"></i>
-          </div>
-        </div> 
-
-        <div class="droite">
-          <div class="groupe">
-            <label>Message</label>
-            <textarea name="message_pub" placeholder="Saisissez ici..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="pied-formulaire" align="center">
-        <button type="submit" value="Envoiyer !" name="submit">Envoyer le message</button>
-      </div>
-    </form>
-    <!-- ---------------------------------------------------------------------------------------------------- -->
-
-<!------------------------------------------------------------------------------------------------------>
-       <footer id="footer" class="footer"> 
-        <span class="copyrights">&copy; 2022 - Sweet tails</span>
-        <a href="#" class="conditions">Condition générales d'adoption</a>
-    </footer>
-    
+<script type="text/javascript" src="js/js.js"></script>
+<script src="https://kit.fontawesome.com/9f75563516.js" crossorigin="anonymous"></script>
 
 
-
-  <!-- ------------------------------------------------------------- -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-<!------------------------------------------------------------------------------------------------------>
-   
-    <script type="text/javascript" src="js/js.js"></script>
-   <script src="https://kit.fontawesome.com/9f75563516.js" crossorigin="anonymous"></script>
-
-     
-
-    
-
+<!---- ---->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html> 

@@ -3,31 +3,48 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="../CSS/stylescnx.css">
 	 <link rel="icon" type="images/png" href="../images/logo1.png">
+     <link rel="stylesheet" href="../CSS/mssalrt.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<title>connexion</title>
 </head>
 <body>
-	
-	<!-- <h1>CONNEXION</h1> -->
-<form action="../back/login.php"  method="post">
-
-	<div class="input-form">
-		<input type="text" name="email" id="email" placeholder=" " required>
-		<label for="email">Adresse email</label>
-	</div>
-
-	<div class="input-form">
-		<input type="password" name="password" id="password" placeholder=" " required>
-		<label for="password" >Mot de passe </label>
 
 
-	</div>
 
-	<div class="submit-form">
-		<button type="submit" name="submit">Connexion</button>
-		
-	</div>
-</form>
-	
+<div class="form-container">
+
+    <form action="../back/login.php" method="post" >
+        <h3>connexion</h3>
+        <input type="text" name="email" id="email" placeholder="email" class="box" required>
+        <input type="password" name="password" id="password" placeholder="mot de passe" class="box" required>
+        <input type="submit" name="submit" value="connexion" class="btn">
+    </form>
+
+    <div class="mssg-alrt">
+      
+                      
+                       <div class="wrapper">
+                <div id="toast">
+                    <div class="container-1">
+                        <i class="fas fa-check-square"></i>
+                    </div>
+                    <div class="container-2">
+                        <p>Success</p>
+                        <p>votre compte a été créé </p>
+                    </div>
+                    <button id="close" onclick="closeToast()">
+                        &times;
+                    </button>
+                </div>
+            </div>
+            
+           
+            <script src="../js/alrt.js"></script>
+        
+                
+        </div>
+
+</div>
 
 </body>
 </html>

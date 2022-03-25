@@ -36,7 +36,7 @@
         
           <div class="c1">
           <div class="images">
-                  <a href="ajout_animaux/chiens.php">   <img src="../../images/categorie/chiens.jpg" ></a>
+                  <a href="ajout_animaux/chiens.php">   <img src="../../images/chiens.jpg" ></a>
                   </div>
                     <div class="txt">
               <p> <a href="ajout_animaux/chiens.php">chiens</a> </p>
@@ -45,7 +45,7 @@
        
            <div class="c1">
            <div class="images">
-                    <a href="ajout_chats/chats.php"> <img src="../../images/categorie/chats.jpg" ></a>
+                    <a href="ajout_chats/chats.php"> <img src="../../images/chats.jpg" ></a>
                     </div>
                     <div class="txt">
                <p><a href="ajout_chats/chats.php">chats</a></p>
@@ -54,7 +54,7 @@
            
            <div class="c1">
                           <div class="images">
-                     <a href="ajout_equide/equide.php">  <img src="../../images/categorie/équidés.jpeg"></a>
+                     <a href="ajout_equide/equide.php">  <img src="../../images/équidés.jpeg"></a>
                     </div>
                     <div class="txt">
                      <p><a href="ajout_equide/equide.php">equidé</a></p>
@@ -63,7 +63,7 @@
      
             <div class="c1">
             <div class="images">
-                     <a href="ajout_rogneurs/rogneur.php"> <img src="../../images/categorie/rongeur.jpg"></a>
+                     <a href="ajout_rogneurs/rogneur.php"> <img src="../../images/rongeur.jpg"></a>
                      </div>
                     <div class="txt">
                     <p> <a href="ajout_rogneurs/rogneur.php">rogneurs</a></p>

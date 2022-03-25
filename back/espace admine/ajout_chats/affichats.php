@@ -3,7 +3,7 @@
 <?php
   session_start();
   if(!$_SESSION['pseudo']) {
-      header('Location: conexion.html');
+      header('Location: ../conexion.html');
   }
   
   include '../../database.php';
