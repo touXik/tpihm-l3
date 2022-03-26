@@ -62,6 +62,7 @@ if(isset($_POST['nom'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../../../CSS/admin/stylescnx.css">
+    <link rel="icon" type="images/png" href="../../../images/log2.jpeg">
     <title>admin-modifier</title>
 </head>
 <body>

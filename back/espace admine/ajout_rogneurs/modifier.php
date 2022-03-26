@@ -35,7 +35,7 @@ if(isset($_POST['nom'])){
           }else{
               $update = $db->prepare('UPDATE rogneur SET nom=?,categorie=?,info=?,date_edit=NOW() WHERE id=?');
               $update->execute(array($nom, $categorie, $info,$edit_id)); 
-               header('Location:affirogneur.php?id='.$edit_id);
+               header('Location:affirogne.php?id='.$edit_id);
               echo' <h1>larticle a bine ajoure</h1>';
           }
        
@@ -63,6 +63,7 @@ if(isset($_POST['nom'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../CSS/admin/stylescnx.css">
+    <link rel="icon" type="images/png" href="../../../images/log2.jpeg">
     <title>admin-modifier</title>
 </head>
 <body>

@@ -37,7 +37,8 @@ if (isset($_POST['submit'])){
             'password'=>$hashpass
         ]);
            
-           include '../html/minilogin.html';
+           include '../html/login.html';
+           include '../html/alrt2.html';
 
         } else{
             

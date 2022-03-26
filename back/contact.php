@@ -28,7 +28,7 @@ $contact=$db -> query('SELECT * FROM contact ORDER BY date_pub DESC');
             // $_SESSION['status']= "message envoiyer";
 
             include '../html/contact.html';
-            include '../html/alrt2.html';
+            include '../html/alrt0.html';
         // echo' <h1>message envoiyer</h1>';
      
 

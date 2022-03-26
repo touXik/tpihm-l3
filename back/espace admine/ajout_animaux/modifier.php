@@ -64,6 +64,7 @@ if(isset($_POST['nom'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../CSS/admin/stylescnx.css">
+    <link rel="icon" type="images/png" href="../../../images/log2.jpeg">
     <title>admin-modifier</title>
 </head>
 <body>

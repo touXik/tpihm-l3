@@ -1,61 +1,59 @@
 
-
 <?php
 
 
-  session_start();
-  if(!$_SESSION['email']) {
-    header('Location: ../../html/login.html');
+session_start();
+if(!$_SESSION['email']) {
+  header('Location: ../../html/login.html');
 }
+
+ include '../database.php';
+  $chiens=$db -> query('SELECT * FROM chiens ORDER BY datepub DESC');
  
-   include '../database.php';
-    $chiens=$db -> query('SELECT * FROM chiens ORDER BY datepub DESC');
-   
 //    if(!$_SESSION['password']) {
 //        header('Location: ../index.html');
 //    }
+
+        
+
+
+             if(isset($_POST['submit'])){
+     if(!empty($_POST['noma']) AND !empty($_POST['prenom']) AND !empty($_POST['email']) AND !empty($_POST['adress']) AND  !empty($_POST['demande']) ){
+                   $get_id=htmlspecialchars($_GET['id']);
+                  $chiens= $db -> prepare('SELECT * FROM chiens WHERE id=?');
+                  $chiens->execute(array($get_id));
+                  if($chiens->rowCount()==1){
   
-          
- 
+                    $chiens=$chiens->fetch();
+                    $id_c=$chiens['id'];
+                    $nom_c=$chiens['nom'];
+                    $categorie_c=$chiens['categorie'];
+                    $info_c=$chiens['info'];
+                  }else{
+                      die('cet article nexistepas');
+                  }
+                $noma=htmlspecialchars($_POST['noma']);
+                $prenom=htmlspecialchars($_POST['prenom']); 
+                $email=htmlspecialchars($_POST['email']);
+                $adress=nl2br(htmlspecialchars($_POST['adress']));
+                $demande=htmlspecialchars($_POST['demande']);
+               
+               
+               
+                       
+          $ins= $db-> prepare('INSERT INTO adopte (noma,prenom,email,adress,demande,id_c,nom_c) VALUES(? , ? , ?, ?, ?,?,?)');
+          $ins-> execute (array($noma, $prenom, $email, $adress, $demande,$id_c,$nom_c));
+        
+      
+                  $n=1;
+        
+       
 
-               if(isset($_POST['submit'])){
-       if(!empty($_POST['noma']) AND !empty($_POST['prenom']) AND !empty($_POST['email']) AND !empty($_POST['adress']) AND  !empty($_POST['demande']) ){
-                     $get_id=htmlspecialchars($_GET['id']);
-                    $chiens= $db -> prepare('SELECT * FROM chiens WHERE id=?');
-                    $chiens->execute(array($get_id));
-                    if($chiens->rowCount()==1){
-    
-                      $chiens=$chiens->fetch();
-                      $id_c=$chiens['id'];
-                      $nom_c=$chiens['nom'];
-                      $categorie_c=$chiens['categorie'];
-                      $info_c=$chiens['info'];
-                    }else{
-                        die('cet article nexistepas');
-                    }
-                  $noma=htmlspecialchars($_POST['noma']);
-                  $prenom=htmlspecialchars($_POST['prenom']); 
-                  $email=htmlspecialchars($_POST['email']);
-                  $adress=nl2br(htmlspecialchars($_POST['adress']));
-                  $demande=htmlspecialchars($_POST['demande']);
-                 
-                 
-                 
-                         
-            $ins= $db-> prepare('INSERT INTO adopte (noma,prenom,email,adress,demande,id_c,nom_c,categorie_c,info_c) VALUES(? , ? , ?, ?, ?,?,?,?,?)');
-            $ins-> execute (array($noma, $prenom, $email, $adress, $demande,$id_c,$nom_c,$categorie_c,$info_c));
-           
-            $n=1;
-         
-          echo " Demande envoyée ";
-         
+     }else{
+         echo'<h1>vuiller compliter tout les champs</h1>';
 
-       }else{
-        $n=0;
-           echo'<h1>veuillez completer tous ces champs</h1>';
-
-       }
-  }
+     }
+}
 ?>
 
 
@@ -64,36 +62,31 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../CSS/mssalrt.css">
   <link rel="stylesheet" type="text/css" href="../../css/stylescnx.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../../CSS/mssalrt.css">
-    <!-- font awesome cdn link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="icon" type="images/png" href="../../images/log2.jpeg">
+<title>Adopte</title>
 </head>
 <body>
+<div>
 <header class="header">
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+<div id="menu-btn" class="fas fa-bars"></div>
 
-    <a href="#" class="logo"> <span>sweet</span>Tails </a>
+<a href="../../index.php" class="logo"> <span>sweet</span>Tails </a>
 
-        <nav class="navbar">
-            <a href="#">accueil</a>
-            <a href="#">contact</a>
-            <a href="#">connexion</a>
-            <a href="#">inscription</a>
-        </nav>
+<nav class="navbar">
+<a href="../../index.php">accueil</a>
+<a href="../../html/contactad.html">contact</a>
+<a href="../affichec_adopt/chiens.php">Chiens</a>
+</nav>
 
-    
 
 </header> 
 
-
-
-<div class="form-container">
 
 <div class="mssg-alrt">
    <?php 
@@ -125,20 +118,21 @@
       ?>
 </div>
 
+<div class="form-container">
+    
 
-  <form  method="post" action="" enctype="multipart/form-data">
-    <h3>saisir les informations</h3>
-    <input type="text" name="noma"  placeholder="nom" class="box" required>
-    <input type="text" name="prenom"  placeholder="prénom" class="box" required>
-    <input type="email" name="email" placeholder="email" class="box" required>
-    <input type="text" name="adresse"  placeholder="adresse" class="box" required>
-    <textarea placeholder="votre message" name="demande" class="box" cols="30" rows="3" required></textarea>
-    <input type="submit" name="submit" value="confirmer" class="btn">
+  <form action="" method="POST" enctype="multipart/form-data">
+   <h1>vuiller saisire info</h1>
+   <input type="text" name="noma" placeholder="nom" class="box" ><br>
+   <input type="text" name="prenom" placeholder="prénom " class="box" ><br>
+   <input type="text" name="email"placeholder=" email " class="box" ><br>
+   <input type="text" name="adress"placeholder=" adress" class="box" ><br>
+   <textarea name="demande" placeholder="message" class="box" ></textarea> <br>
+   
+   <input type="submit" name="submit"placeholder="confirmer" class="btn">
   </form>
-
-
 </div>
-
+    
 <footer id="footer" class="footer"> 
   <span class="copyrights">&copy; 2022 - Sweet tails</span>
   <a href="#" class="conditions">Condition générales d'adoption</a>
@@ -146,8 +140,5 @@
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="../../js/script.js"></script>
-
-
-  
 </body>
 </html>

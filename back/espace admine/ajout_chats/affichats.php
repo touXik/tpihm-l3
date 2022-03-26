@@ -35,7 +35,7 @@
   <meta charset="UTF-8">
  
   <link rel="stylesheet" href="../../../CSS/admin/affich.css">
- 
+  <link rel="icon" type="images/png" href="../../../images/log2.jpeg">
 
  <title>animal</title>
 </head>

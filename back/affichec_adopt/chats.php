@@ -25,7 +25,9 @@
    
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="../../css/stylescat.css">
-  <title>Document</title>
+  <link rel="icon" type="images/png" href="../../images/log2.jpeg">
+
+  <title>chats</title>
 </head>
 <body>
 
@@ -40,7 +42,8 @@
     <nav class="navbar">
         <a href="../../index.php">accueil</a>
       
-        <a href="../../html/contact.html">contact</a>
+        <a href="../../html/contactad.html">contact</a>
+        <a href="../logout.php">deconnexion</a>
      
     </nav>
 

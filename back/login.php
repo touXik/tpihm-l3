@@ -6,14 +6,14 @@
 
 <?php
 
-if(isset($_SESSION['lastname']) && isset($_SESSION['firstname']) && isset($_SESSION['email']) &&                   isset($_SESSION['date'])){
+if(isset($_SESSION['lastname']) && isset($_SESSION['firstname']) && isset($_SESSION['email']) &&   isset($_SESSION['date'])){
     
      
 
 }else{
    
-    include '../html/login.html'; 
-    include '../html/alrt1.html';
+    // include '../html/login.html'; 
+    // include '../html/alrt1.html';
 }
 
 
@@ -48,8 +48,8 @@ if (isset($_POST['submit'])){
 
             }else {
              
-                include '../html/login.html'; 
-                include '../html/alrt1.html';
+                  include '../html/login.html'; 
+                  include '../html/alrt1.html';
 
             }
 

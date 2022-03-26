@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/stylescnx.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="images/png" href="../images/log2.jpeg">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<title>s'inscrire</title>
+</head>
+<body>
+
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> <span>sweet</span>Tails </a>
+
+        <nav class="navbar">
+            <a href="../index.html">accueil</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+</header> 
+
+
+
+	<div class="form-container">
+		
+	    <form action="../back/register.php" method="post">
+	        <h3>inscription</h3>
+	        <input type="text" name="lastname" id="lastname" placeholder="nom" class="box" required>
+	        <input type="text" name="firstname" id="firstname" placeholder="prénom" class="box" required>
+	        <input type="text" name="email" id="email" placeholder="adresse email" class="box" required>
+	        <input type="password" name="password" id="password" placeholder="mot de pass" class="box" required>
+	        <input type="password" name="cpassword" id="cpassword" placeholder="confirmer le mot de pass" class="box">
+	        <input type="submit" name="submit" value="inscription" class="btn">
+	        
+	         <p> vous avez un compte?<a href="login.html"> connectez-vous</a> </p>
+	    </form>
+
+	</div>
+
+<footer id="footer" class="footer"> 
+  <span class="copyrights">&copy; 2022 - Sweet tails</span>
+  <a href="#" class="conditions">Condition générales d'adoption</a>
+</footer>
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="../js/script.js"></script>
+		
+
+</body>
+</html>

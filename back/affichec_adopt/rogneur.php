@@ -24,7 +24,8 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="../../css/stylescat.css">
-  <title>Document</title>
+  <link rel="icon" type="images/png" href="../../images/log2.jpeg">
+  <title>Rongeur</title>
 </head>
 <body>
 
@@ -38,7 +39,8 @@
         <nav class="navbar">
             <a href="../../index.php">accueil</a>
           
-            <a href="../../html/contact.html">contact</a>
+            <a href="../../html/contactad.html">contact</a>
+            <a href="../logout.php">deconnexion</a>
          
         </nav>
 
@@ -53,11 +55,11 @@
 
 
 <div class="box-container">
-  <?php while($c=$equide->fetch()){ ?>
+  <?php while($c=$rogneur->fetch()){ ?>
 
     <div class="box">
              <div class="img">
-                        <img src="../espace admine/ajout_equide/img/<?=$c['id']?>.jpg" width="200" height="200"  >
+                        <img src="../espace admine/ajout_rogneurs/img/<?=$c['id']?>.jpg" width="200" height="200"  >
              </div>
 
              <div class="txt">
@@ -78,7 +80,7 @@
                         </div>
          </div>
             <div class="bttn">
-                     <button> <a href="../adopte/adopte_h.php?id=<?=$c['id']?>" class="btn">adopte</a></button>
+                     <button> <a href="../adopte/adopte_r.php?id=<?=$c['id']?>" class="btn">adopte</a></button>
              </div>
       
     </div>

@@ -53,7 +53,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <link rel="stylesheet" href="../../../CSS/admin/stylescnx.css">
-    <title>Document</title>
+    <link rel="icon" type="images/png" href="../../../images/log2.jpeg">
+    <title>admin-ajout chats</title>
 </head>
 <body>
 

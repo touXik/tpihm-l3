@@ -4,8 +4,8 @@ session_start();
 
  if(isset($_POST['submit'])){
        if (!empty($_POST['pseudo']) and !empty($_POST['password'])){
-           $pseudo_pd='admine';
-           $password_pd='admine';
+           $pseudo_pd='admin';
+           $password_pd='admin';
 
            $pseudo_s=htmlspecialchars($_POST['pseudo']);
            $password_s=htmlspecialchars($_POST['password']);

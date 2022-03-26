@@ -40,7 +40,7 @@
             <a href="#">accueil</a>
             <a href="#a-propos">à propos</a>
             <a href="#services">services</a>
-            <a href="html/contact.php">contact</a>
+            <a href="html/contactad.html">contact</a>
             <a href="back/logout.php">deconnexion</a>
             
         </nav>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <a href="back/affichec_adopt/equide.php"><img src="images/awtul.jpg" alt=""></a>
+                <a href="back/affichec_adopt/equide.php"><img src="images/1.jpg" alt=""></a>
                 <div class="content">
                     <h3>équidés</h3>
                 </div>

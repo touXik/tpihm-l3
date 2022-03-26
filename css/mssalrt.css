@@ -71,3 +71,12 @@ body{
   /*  transform: translate(400px);*/
     transition: 1s;
 }
+
+#toastt button{
+    align-self: flex-start;
+    background-color: transparent;
+    font-size: 25px;
+    line-height: 0;
+    color: #656565;
+    cursor: pointer;
+}
